@@ -1,6 +1,7 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
-
+import eurlImg from '@/../public/eurl.png'
+import vitalisImg from '@/../public/vitalis.png'
 export const DATA = {
   name: "Vijesh Shetty",
   initials: "VS",
@@ -106,6 +107,7 @@ export const DATA = {
         "Solidity",
         "TailwindCSS",
       ],
+      image: vitalisImg,
       links: [
         {
           type: "Repository",
@@ -133,6 +135,7 @@ export const DATA = {
         "Clickhouse",
         "Express",
       ],
+      image: eurlImg,
       links: [
         {
           type: "Repository",
@@ -145,6 +148,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
+      
     },
 
     {
