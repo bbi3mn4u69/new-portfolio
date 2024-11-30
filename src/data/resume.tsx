@@ -2,6 +2,8 @@ import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 import eurlImg from '@/../public/eurl.png'
 import vitalisImg from '@/../public/vitalis.png'
+import { FaCrown } from "react-icons/fa";
+
 export const DATA = {
   name: "Vijesh Shetty",
   initials: "VS",
@@ -195,14 +197,43 @@ export const DATA = {
     
   ],
   hackathons: [
+
+    {
+      title: "GenAI Hackathon",
+      dates: "November 29,2024",
+      location: "RV College of Engineering Bangalore",
+      description:
+        "Built an AI-powered workflow to help doctors diagnose diseases faster. The AI interacts with patients to gather information and arrive at a preliminary diagnosis, which is then sent to doctors for review. Doctors can review the report, add medications or remarks, and finalize the diagnosis. Patients can view the finalized report and prescriptions through their portal.",
+      image:
+        "/acc.jpeg",
+      links: [
+        {
+          title: "Winner",
+          icon: <FaCrown className="h-4 w-4"/>,
+          href: "#"
+        },
+        {
+          title: "Source",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/VijeshVS/AyuConnect",
+        },
+      ],
+    },
     {
       title: "Quanta-A-Maze 2.0",
-      dates: "November 2024",
-      location: "Bangalore, India",
+      dates: "November 14-16, 2024",
+      location: "NMIT Bangalore",
       description:
         "Developed during a 36-hour hackathon at NMIT-Bangalore, Vitalis is a decentralized healthcare platform promoting transparency between doctors and patients. It automates authentication, appointment booking, and the issuance of medical records using smart contracts. The platform ensures secure sharing of medical documents through asymmetric encryption, enabling seamless collaboration and trust within the healthcare ecosystem.",
-      image: "",
-      technologies: ["NextJs"]
+      image: "/qbit.jpeg",
+      technologies: ["NextJs"],
+      links: [
+        {
+          title: "Source",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/VijeshVS/Vitalis",
+        },
+      ],
     },
   ],
 } as const;
