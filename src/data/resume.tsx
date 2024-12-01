@@ -3,6 +3,7 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 import eurlImg from '@/../public/eurl.png'
 import vitalisImg from '@/../public/vitalis.png'
 import { FaCrown } from "react-icons/fa";
+import { GrCertificate } from "react-icons/gr";
 
 export const DATA = {
   name: "Vijesh Shetty",
@@ -217,6 +218,11 @@ export const DATA = {
           icon: <Icons.github className="h-4 w-4" />,
           href: "https://github.com/VijeshVS/AyuConnect",
         },
+        {
+          title: "Certificate",
+          icon: <GrCertificate className="h-3 w-3" />,
+          href: "https://drive.google.com/file/d/1V4k2IBulhvp5WF4M5pBWBe3ilBY4OsVJ/view?usp=drive_link"
+        }
       ],
     },
     {
@@ -233,6 +239,11 @@ export const DATA = {
           icon: <Icons.github className="h-4 w-4" />,
           href: "https://github.com/VijeshVS/Vitalis",
         },
+        {
+          title: "Certificate",
+          icon: <GrCertificate className="h-3 w-3" />,
+          href: "https://drive.google.com/file/d/1lLWOtniAj1DU7YWJq3E41FM3xD3GBZHc/view?usp=drive_link"
+        }
       ],
     },
   ],
