@@ -2,7 +2,7 @@ import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 import eurlImg from '@/../public/eurl.png'
 import vitalisImg from '@/../public/vitalis.png'
-import { FaCrown } from "react-icons/fa";
+import { FaCrown, FaDev } from "react-icons/fa";
 import { GrCertificate } from "react-icons/gr";
 
 export const DATA = {
@@ -238,6 +238,11 @@ export const DATA = {
           title: "Source",
           icon: <Icons.github className="h-4 w-4" />,
           href: "https://github.com/VijeshVS/Vitalis",
+        },
+        {
+          title: "Devfolio",
+          icon: <FaDev className="h-4 w-4" />,
+          href: "https://devfolio.co/projects/vitalis-beaf",
         },
         {
           title: "Certificate",
