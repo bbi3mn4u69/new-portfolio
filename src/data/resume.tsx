@@ -73,8 +73,6 @@ export const DATA = {
       logoUrl: "/ieee-rvce.jpeg",
       start: "April 2024",
       end: "November 2024",
-      description:
-        "Collaborated on the CSITSS RVCE 2024 website to optimize the user interface and improve design responsiveness for enhanced usability.",
     },
   ],
   education: [
