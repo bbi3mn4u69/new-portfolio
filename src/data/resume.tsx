@@ -1,21 +1,21 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
-import eurlImg from '@/../public/eurl.png'
-import vitalisImg from '@/../public/vitalis.png'
+import eurlImg from "@/../public/eurl.png";
+import vitalisImg from "@/../public/vitalis.png";
 import { FaCrown, FaDev } from "react-icons/fa";
 import { GrCertificate } from "react-icons/gr";
 
 export const DATA = {
-  name: "Vijesh Shetty",
-  initials: "VS",
+  name: "Huy",
+  initials: "QHP",
   url: "https://vijesh.vercel.app",
-  location: "Bangalore, India",
-  locationLink: "https://lh5.googleusercontent.com/p/AF1QipPz_1tNzJsMmm3EfrKGJneK8WNp_MYrcDn4r_zI=w533-h240-k-no",
-  description:
-    "Full Stack Developer",
+  location: "Hanoi, Vietnam",
+  locationLink:
+    "https://lh5.googleusercontent.com/p/AF1QipPz_1tNzJsMmm3EfrKGJneK8WNp_MYrcDn4r_zI=w533-h240-k-no",
+  description: "Full Stack Developer",
   summary:
-    "Currently pursuing a B.E. in Information Science and Engineering at RV College of Engineering. I am passionate about Web development and Blockchain Technology. I have hands-on experience in building full stack applications ",
-  avatarUrl: "/mypic.jpeg",
+    "I am currently pursuing a Software Development major at Swinburne University of Technology in Australia. I am deeply passionate about web development and blockchain technology, and have gained practical experience in building full-stack applications.",
+  avatarUrl: "icons/huy.jpeg",
   skills: [
     "Next.js",
     "React",
@@ -39,19 +39,19 @@ export const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com/VijeshVS",
+        url: "https://github.com/bbi3mn4u69",
         icon: Icons.github,
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/vijeshsshetty/",
+        url: "https://www.linkedin.com/in/huy-pham-085620297/",
         icon: Icons.linkedin,
         navbar: true,
       },
       X: {
         name: "X",
-        url: "https://twitter.com/vijeshsshetty", // Placeholder if no X handle exists
+        url: "https://twitter.com/vijeshsshetty",
         icon: Icons.x,
         navbar: false,
       },
@@ -65,31 +65,36 @@ export const DATA = {
   },
   work: [
     {
-      company: "IEEE-RVCE",
-      href: "https://rvce.edu.in/ieee",
+      company: "Lyra Technologies",
+      href: "https://www.lyratechnologies.com.au/",
       badges: [],
       location: "RVCE, Bangalore",
-      title: "Web Developer",
-      logoUrl: "/ieee-rvce.jpeg",
-      start: "April 2024",
-      end: "November 2024",
+      title: "Junior Web Developer",
+      logoUrl: "icons/lyra-logo.svg",
+      start: "Dec 2023",
+      end: "Dec 2024",
+      description: `Lyra is a leading digital product studio that helps startups and scale-ups design, build, and ship incredible products.
+
+As a software engineer, I have worked with key stakeholders on delivering successful products to companies such as Concept Education and VirtualStaging.art.
+
+Tech Stack: Next.js, Typescript, Postgres, Tailwind, GCP`,
     },
   ],
   education: [
     {
-      school: "RV College of Engineering",
-      href: "https://rvce.edu.in",
-      degree: "B.E. in Information Science and Engineering",
-      logoUrl: "/rvce.jpeg",
-      start: "2023",
-      end: "2027",
+      school: "Swinburne University of Technology",
+      href: "https://www.swinburne.edu.au",
+      degree: "Software Development @ Swinburne University, GPA: 3.65",
+      logoUrl: "icons/swinburne.png",
+      start: "2022",
+      end: "2025",
     },
     {
-      school: "Expert PU College",
-      href: "https://expert.edu.in",
-      degree: "Pre-University PCMC",
-      logoUrl: "/expert.jpeg",
-      start: "2021",
+      school: "Phan Huy Chu - Dong Da Highschool",
+      href: "https://www.phc.edu.vn/",
+      degree: "GPA: 9.1",
+      logoUrl: "icons/phanhuychu.png",
+      start: "2019",
       end: "2022",
     },
   ],
@@ -101,13 +106,7 @@ export const DATA = {
       active: true,
       description:
         "A decentralized healthcare platform facilitating secure and transparent interactions between doctors and patients, developed during a 36-hour hackathon at NMIT.",
-      technologies: [
-        "Next.js",
-        "Web3.js",
-        "IPFS",
-        "Solidity",
-        "TailwindCSS",
-      ],
+      technologies: ["Next.js", "Web3.js", "IPFS", "Solidity", "TailwindCSS"],
       image: vitalisImg,
       links: [
         {
@@ -129,13 +128,7 @@ export const DATA = {
       active: true,
       description:
         "A link-shortening tool with advanced analytics, offering insights into engagement, devices, and geographic data.",
-      technologies: [
-        "Next.js",
-        "Kafka",
-        "Redis",
-        "Clickhouse",
-        "Express",
-      ],
+      technologies: ["Next.js", "Kafka", "Redis", "Clickhouse", "Express"],
       image: eurlImg,
       links: [
         {
@@ -149,7 +142,6 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      
     },
 
     {
@@ -158,11 +150,7 @@ export const DATA = {
       active: true,
       description:
         "Developed an Android application to monitor the quality of water resources in real-time, integrated ESP32 to collect data and commit it to Firebase Realtime Database, and used MPAndroidChart to seamlessly analyze and visualize the quality of water over time.",
-      technologies: [
-        "Java",
-        "Firebase",
-        "Arduino C"
-      ],
+      technologies: ["Java", "Firebase", "Arduino C"],
       links: [
         {
           type: "Repository",
@@ -178,13 +166,7 @@ export const DATA = {
       active: true,
       description:
         "Developed and continuously managed a web application for petrol bunk dealers, enabling seamless credit management, comprehensive bill tracking, and gaining client and dealer recognition.",
-      technologies: [
-        "Flask",
-        "Python",
-        "Postgres",
-        "SqlAlchemy",
-        "Jenkins"
-      ],
+      technologies: ["Flask", "Python", "Postgres", "SqlAlchemy", "Jenkins"],
       links: [
         {
           type: "Repository",
@@ -193,23 +175,20 @@ export const DATA = {
         },
       ],
     },
-    
   ],
   hackathons: [
-
     {
       title: "GenAI Hackathon",
       dates: "November 29,2024",
       location: "RV College of Engineering Bangalore",
       description:
         "Built an AI-powered workflow to help doctors diagnose diseases faster. The AI interacts with patients to gather information and arrive at a preliminary diagnosis, which is then sent to doctors for review. Doctors can review the report, add medications or remarks, and finalize the diagnosis. Patients can view the finalized report and prescriptions through their portal.",
-      image:
-        "/acc.jpeg",
+      image: "/acc.jpeg",
       links: [
         {
           title: "Winner",
-          icon: <FaCrown className="h-4 w-4"/>,
-          href: "#"
+          icon: <FaCrown className="h-4 w-4" />,
+          href: "#",
         },
         {
           title: "Source",
@@ -219,8 +198,8 @@ export const DATA = {
         {
           title: "Certificate",
           icon: <GrCertificate className="h-3 w-3" />,
-          href: "https://drive.google.com/file/d/1V4k2IBulhvp5WF4M5pBWBe3ilBY4OsVJ/view?usp=drive_link"
-        }
+          href: "https://drive.google.com/file/d/1V4k2IBulhvp5WF4M5pBWBe3ilBY4OsVJ/view?usp=drive_link",
+        },
       ],
     },
     {
@@ -245,8 +224,8 @@ export const DATA = {
         {
           title: "Certificate",
           icon: <GrCertificate className="h-3 w-3" />,
-          href: "https://drive.google.com/file/d/1lLWOtniAj1DU7YWJq3E41FM3xD3GBZHc/view?usp=drive_link"
-        }
+          href: "https://drive.google.com/file/d/1lLWOtniAj1DU7YWJq3E41FM3xD3GBZHc/view?usp=drive_link",
+        },
       ],
     },
   ],
