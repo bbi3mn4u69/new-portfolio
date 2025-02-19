@@ -25,24 +25,24 @@ import { AnimatedListDemo } from "./components/Notification";
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
-  // const [isLoading, setIsLoading] = useState(true);
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 20000);
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 20000);
 
-  //   return () => clearTimeout(timer);
-  // }, []);
+    return () => clearTimeout(timer);
+  }, []);
 
-  // if (isLoading) {
-  //   return (
-  //     <div className="min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6">
-  //       <div className="w-full min-h-full flex justify-center items-center">
-  //         <TerminalDemo></TerminalDemo>
-  //       </div>
-  //     </div>
-  //   );
-  // }
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6">
+        <div className="w-full min-h-full flex justify-center items-center">
+          <TerminalDemo></TerminalDemo>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="relative">
