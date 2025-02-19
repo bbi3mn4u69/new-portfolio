@@ -2,7 +2,7 @@ import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 import soma from "@/../public/icons/soma.png";
 import deltaImg from "@/../public/icons/deltain.png";
-import { FaCrown, FaDev } from "react-icons/fa";
+import { FaCrown, FaDev, FaRegNewspaper, FaSearch } from "react-icons/fa";
 import { GrCertificate } from "react-icons/gr";
 import tip from "@/../public/icons/tip.png";
 import virtualstagingart from "@/../public/icons/virtualstagingart.png";
@@ -240,7 +240,7 @@ Tech Stack: Next.js, Typescript, Postgres, Tailwind, GCP`,
     {
       title: "Swinburne Emerging Leader Program",
       dates: "Nov, 2024",
-      location: "Swinburne University of Technology - Hawthorn Campus",
+      location: "Hawthorn Campus, Australia",
       description:
         "The Swinburne Emerging Leader Program is an initiative designed to identify and nurture high-potential students, providing them with opportunities to develop critical leadership skills and enhance their employability through practical experiences and mentorship, preparing them for future professional roles within their chosen fields",
       image: "icons/swinburne.png",
@@ -254,8 +254,8 @@ Tech Stack: Next.js, Typescript, Postgres, Tailwind, GCP`,
     },
     {
       title: "Swinburne International Excellence Undergraduate Scholarship",
-      dates: "Nov, 2022",
-      location: "Swinburne University of Technology - Hawthorn Campus",
+      dates: "Dec, 2022",
+      location: "Hawthorn Campus, Australia",
       description:
         "This scholarship is a merit-based scholarship offered to international students commencing an undergraduate or postgraduate course at Swinburne University Hawthorn campus.",
       // technologies: [""],
@@ -265,6 +265,59 @@ Tech Stack: Next.js, Typescript, Postgres, Tailwind, GCP`,
           title: "Certificate",
           icon: <GrCertificate className="h-3 w-3" />,
           href: "./nguyen-quang-huy-pham-scholarship.pdf",
+        },
+      ],
+    },
+    {
+      title: "International Science and Engineering Fair Finalist",
+      dates: "Dec, 2022",
+      location: "Atlanta, Georgia",
+      description:
+        `The International Science and Engineering Fair (ISEF) is an annual science competition for high school students. It's considered the top pre-college science competition in the world.`,
+      // technologies: [""],
+      image: "/isef.png",
+      links: [
+        {
+          title: "Abstract Search",
+          icon: <FaSearch className="h-3 w-3" />,
+          href: "https://abstracts.societyforscience.org/Home/FullAbstract?Category=Behavioral%20and%20Social%20Sciences&FinalistLastName=Pham&IsGetAllAbstracts=True&FairCountry=Viet%20Nam&FairState=Any%20State&SelectedIsefYears%5B0%5D=0&projectId=22858",
+        },
+      ],
+    },
+    {
+      title: "Vietnam Science and Engineering Fair Champion",
+      dates: "Oct, 2022",
+      location: "Hanoi, Vietnam",
+      description:
+        `The "Vietnam Science and Engineering Fair" (ViSEF) is a national-level competition in Vietnam where high school students showcase their science and engineering projects, essentially serving as the Vietnamese qualifier for the international "International Science and Engineering Fair" (ISEF) where students can compete against peers from around the world; it is organized by the Vietnamese Ministry of Education and Training`,
+      // technologies: [""],
+      image: "/visef.png",
+      links: [
+        {
+          title: "Certificate",
+          icon: <GrCertificate className="h-3 w-3" />,
+          href: "./huy-visef-cert.jpg",
+        },
+        {
+          title: "News",
+          icon: <FaRegNewspaper className="h-3 w-3" />,
+          href: "https://dantri.com.vn/giao-duc/hai-nam-sinh-gen-z-chinh-phuc-giai-khoa-hoc-ky-thuat-quoc-te-20221229115915248.htm",
+        },
+      ],
+    },
+    {
+      title: "Vietnam Science and Engineering Fair - 2nd - district-level",
+      dates: "Oct, 2021",
+      location: "Hanoi, Vietnam",
+      description:
+        `The "Vietnam Science and Engineering Fair" (ViSEF) is a national-level competition in Vietnam where high school students showcase their science and engineering projects, essentially serving as the Vietnamese qualifier for the international "International Science and Engineering Fair" (ISEF) where students can compete against peers from around the world; it is organized by the Vietnamese Ministry of Education and Training`,
+      // technologies: [""],
+      image: "/visef.png",
+      links: [
+        {
+          title: "Certificate",
+          icon: <GrCertificate className="h-3 w-3" />,
+          href: "./huy-visef-cert.jpg",
         },
       ],
     },
