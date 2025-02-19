@@ -1,21 +1,19 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 import soma from "@/../public/icons/soma.png";
-import deltaImg from "@/../public/icons/deltain.png"
+import deltaImg from "@/../public/icons/deltain.png";
 import { FaCrown, FaDev } from "react-icons/fa";
 import { GrCertificate } from "react-icons/gr";
 import tip from "@/../public/icons/tip.png";
 import virtualstagingart from "@/../public/icons/virtualstagingart.png";
 import paraform from "@/../public/icons/paraform.png";
 
-
 export const DATA = {
   name: "Huy",
   initials: "QHP",
   url: "https://new-portfolio-lake-sigma.vercel.app/",
   location: "Hanoi, Vietnam",
-  locationLink:
-    "https://lh5.googleusercontent.com/p/AF1QipPz_1tNzJsMmm3EfrKGJneK8WNp_MYrcDn4r_zI=w533-h240-k-no",
+  locationLink: "",
   description: "Full Stack Developer",
   summary:
     "I am currently pursuing a Software Development major at Swinburne University of Technology in Australia. I am deeply passionate about web development and blockchain technology, and have gained practical experience in building full-stack applications.",
@@ -110,7 +108,15 @@ Tech Stack: Next.js, Typescript, Postgres, Tailwind, GCP`,
       active: true,
       description:
         "Delta Institute offered students to build the skills they’ll need to get an internship during college and a job after graduating.",
-      technologies: ["Framer", "Next js", "Postgre DB", "TRPC", "Tailwind CSS", "NextUI CSS framework", "Schadcn CSS framework"],
+      technologies: [
+        "Framer",
+        "Next js",
+        "Postgre DB",
+        "TRPC",
+        "Tailwind CSS",
+        "NextUI CSS framework",
+        "Schadcn CSS framework",
+      ],
       image: deltaImg,
       links: [
         {
@@ -127,7 +133,14 @@ Tech Stack: Next.js, Typescript, Postgres, Tailwind, GCP`,
       active: true,
       description:
         "Soma Capital is a venture capital firm that invests in startups that use technology to improve humanity",
-      technologies: ["Next.js","Prisma ORM", "TRPC", "Postgre DB", "Tailwind CSS", "Tremo CSS framework"],
+      technologies: [
+        "Next.js",
+        "Prisma ORM",
+        "TRPC",
+        "Postgre DB",
+        "Tailwind CSS",
+        "Tremo CSS framework",
+      ],
       image: soma,
       links: [
         {
@@ -146,8 +159,20 @@ Tech Stack: Next.js, Typescript, Postgres, Tailwind, GCP`,
       image: tip,
       description:
         "Tiprio is a product that easily generates unlimited furnished images of your home in less than a minute",
-      technologies: ["Next js", "Prisma ORM", "TRPC", "Supabase DB", "Tailwind CSS"," Next js"," Prisma ORM", "Postgre DB",
-        "TRPC", "Tailwind CSS", "NextUI CSS framework"," Schadcn CSS framework"],
+      technologies: [
+        "Next js",
+        "Prisma ORM",
+        "TRPC",
+        "Supabase DB",
+        "Tailwind CSS",
+        " Next js",
+        " Prisma ORM",
+        "Postgre DB",
+        "TRPC",
+        "Tailwind CSS",
+        "NextUI CSS framework",
+        " Schadcn CSS framework",
+      ],
       links: [
         {
           type: "Website",
@@ -160,12 +185,24 @@ Tech Stack: Next.js, Typescript, Postgres, Tailwind, GCP`,
     {
       title: "VirtualStaging.art",
       dates: "Jun 2023 - Sep 2023",
+      href: "https://www.virtualstaging.art/en",
       active: true,
       image: virtualstagingart,
       description:
         "Virtual staging.Art allows users to enhance and transform a vacant or poorly furnished property using computer generated furniture",
-      technologies: ["Next js", "Prisma ORM", "TRPC", "Supabase DB", "Tailwind CSS", "Next js"," Prisma ORM", "Postgre DB",
-        "TRPC"," Tailwind CSS", "and other CSS framework"],
+      technologies: [
+        "Next js",
+        "Prisma ORM",
+        "TRPC",
+        "Supabase DB",
+        "Tailwind CSS",
+        "Next js",
+        " Prisma ORM",
+        "Postgre DB",
+        "TRPC",
+        " Tailwind CSS",
+        "and other CSS framework",
+      ],
       links: [
         {
           type: "Website",
@@ -182,7 +219,14 @@ Tech Stack: Next.js, Typescript, Postgres, Tailwind, GCP`,
       href: "https://www.paraform.com/",
       description:
         "Paraform is a talent platform where startups post referral bounties for open roles and anyone can claim that by successfully referring someone",
-      technologies: ["Next js", "Prisma ORM", "TRPC", "Postgre DB", "Tailwind CSS", "TanStack"],
+      technologies: [
+        "Next js",
+        "Prisma ORM",
+        "TRPC",
+        "Postgre DB",
+        "Tailwind CSS",
+        "TanStack",
+      ],
       links: [
         {
           type: "Website",
@@ -196,51 +240,31 @@ Tech Stack: Next.js, Typescript, Postgres, Tailwind, GCP`,
     {
       title: "Swinburne Emerging Leader Program",
       dates: "Nov, 2024",
-      location: "Swinburne University of Technology ",
+      location: "Swinburne University of Technology - Hawthorn Campus",
       description:
         "The Swinburne Emerging Leader Program is an initiative designed to identify and nurture high-potential students, providing them with opportunities to develop critical leadership skills and enhance their employability through practical experiences and mentorship, preparing them for future professional roles within their chosen fields",
-      image: "/acc.jpeg",
+      image: "icons/swinburne.png",
       links: [
-        {
-          title: "Winner",
-          icon: <FaCrown className="h-4 w-4" />,
-          href: "#",
-        },
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/VijeshVS/AyuConnect",
-        },
         {
           title: "Certificate",
           icon: <GrCertificate className="h-3 w-3" />,
-          href: "https://drive.google.com/file/d/1V4k2IBulhvp5WF4M5pBWBe3ilBY4OsVJ/view?usp=drive_link",
+          href: "./quanghuy-cert.pdf",
         },
       ],
     },
     {
-      title: "Quanta-A-Maze 2.0",
-      dates: "November 14-16, 2024",
-      location: "NMIT Bangalore",
+      title: "Swinburne International Excellence Undergraduate Scholarship",
+      dates: "Nov, 2022",
+      location: "Swinburne University of Technology - Hawthorn Campus",
       description:
-        "Developed during a 36-hour hackathon at NMIT-Bangalore, Vitalis is a decentralized healthcare platform promoting transparency between doctors and patients. It automates authentication, appointment booking, and the issuance of medical records using smart contracts. The platform ensures secure sharing of medical documents through asymmetric encryption, enabling seamless collaboration and trust within the healthcare ecosystem.",
-      image: "/qbit.jpeg",
-      technologies: ["NextJs"],
+        "This scholarship is a merit-based scholarship offered to international students commencing an undergraduate or postgraduate course at Swinburne University Hawthorn campus.",
+      // technologies: [""],
+      image: "icons/swinburne.png",
       links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/VijeshVS/Vitalis",
-        },
-        {
-          title: "Devfolio",
-          icon: <FaDev className="h-4 w-4" />,
-          href: "https://devfolio.co/projects/vitalis-beaf",
-        },
         {
           title: "Certificate",
           icon: <GrCertificate className="h-3 w-3" />,
-          href: "https://drive.google.com/file/d/1lLWOtniAj1DU7YWJq3E41FM3xD3GBZHc/view?usp=drive_link",
+          href: "./nguyen-quang-huy-pham-scholarship.pdf",
         },
       ],
     },
