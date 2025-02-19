@@ -1,9 +1,13 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
-import eurlImg from "@/../public/eurl.png";
-import vitalisImg from "@/../public/vitalis.png";
+import soma from "@/../public/icons/soma.png";
+import deltaImg from "@/../public/icons/deltain.png"
 import { FaCrown, FaDev } from "react-icons/fa";
 import { GrCertificate } from "react-icons/gr";
+import tip from "@/../public/icons/tip.png";
+import virtualstagingart from "@/../public/icons/virtualstagingart.png";
+import paraform from "@/../public/icons/paraform.png";
+
 
 export const DATA = {
   name: "Huy",
@@ -34,8 +38,8 @@ export const DATA = {
     { href: "./Resume.pdf", icon: NotebookIcon, label: "Resume" },
   ],
   contact: {
-    email: "vijeshsshetty@gmail.com",
-    tel: "+91 7795639998",
+    email: "qh.namviet@gmail.com",
+    tel: "+61 414625358",
     social: {
       GitHub: {
         name: "GitHub",
@@ -57,9 +61,9 @@ export const DATA = {
       },
       email: {
         name: "Send Email",
-        url: "mailto:vijeshsshetty@gmail.com",
+        url: "mailto:qh.namviet@gmail.com",
         icon: Icons.email,
-        navbar: false,
+        navbar: true,
       },
     },
   },
@@ -100,89 +104,101 @@ Tech Stack: Next.js, Typescript, Postgres, Tailwind, GCP`,
   ],
   projects: [
     {
-      title: "Vitalis",
-      href: "https://github.com/VijeshVS/Vitalis",
+      title: "Delta Institute",
+      href: "https://www.deltainstitute.co/",
       dates: "November 2024",
       active: true,
       description:
-        "A decentralized healthcare platform facilitating secure and transparent interactions between doctors and patients, developed during a 36-hour hackathon at NMIT.",
-      technologies: ["Next.js", "Web3.js", "IPFS", "Solidity", "TailwindCSS"],
-      image: vitalisImg,
+        "Delta Institute offered students to build the skills they’ll need to get an internship during college and a job after graduating.",
+      technologies: ["Framer", "Next js", "Postgre DB", "TRPC", "Tailwind CSS", "NextUI CSS framework", "Schadcn CSS framework"],
+      image: deltaImg,
       links: [
         {
-          type: "Repository",
-          href: "https://github.com/VijeshVS/Vitalis",
-          icon: <Icons.github className="h-4 w-4" />,
-        },
-        {
           type: "Website",
-          href: "https://vitalis.shrishdeshpande.com/",
+          href: "https://www.deltainstitute.co/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
     },
     {
-      title: "EatMyURL",
-      href: "https://eurl.dev",
+      title: "Soma Capital",
+      href: "https://somacap.com/",
       dates: "March 2024 - June 2024",
       active: true,
       description:
-        "A link-shortening tool with advanced analytics, offering insights into engagement, devices, and geographic data.",
-      technologies: ["Next.js", "Kafka", "Redis", "Clickhouse", "Express"],
-      image: eurlImg,
+        "Soma Capital is a venture capital firm that invests in startups that use technology to improve humanity",
+      technologies: ["Next.js","Prisma ORM", "TRPC", "Postgre DB", "Tailwind CSS", "Tremo CSS framework"],
+      image: soma,
       links: [
         {
-          type: "Repository",
-          href: "https://github.com/vigneshshettyin/EatMyURL",
-          icon: <Icons.github className="h-4 w-4" />,
-        },
-        {
           type: "Website",
-          href: "https://eurl.dev",
+          href: "https://somacap.com/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
     },
 
     {
-      title: "Muncipalty Action Center",
+      title: "Tipriyo",
       dates: "Nov 2023 – Jan 2024",
+      href: "https://www.tipriyo.ai/en",
       active: true,
+      image: tip,
       description:
-        "Developed an Android application to monitor the quality of water resources in real-time, integrated ESP32 to collect data and commit it to Firebase Realtime Database, and used MPAndroidChart to seamlessly analyze and visualize the quality of water over time.",
-      technologies: ["Java", "Firebase", "Arduino C"],
+        "Tiprio is a product that easily generates unlimited furnished images of your home in less than a minute",
+      technologies: ["Next js", "Prisma ORM", "TRPC", "Supabase DB", "Tailwind CSS"," Next js"," Prisma ORM", "Postgre DB",
+        "TRPC", "Tailwind CSS", "NextUI CSS framework"," Schadcn CSS framework"],
       links: [
         {
-          type: "Repository",
-          href: "https://github.com/VijeshVS/rssbuddy",
+          type: "Website",
+          href: "https://www.tipriyo.ai/en",
           icon: <Icons.github className="h-4 w-4" />,
         },
       ],
     },
 
     {
-      title: "RSS Buddy",
+      title: "VirtualStaging.art",
       dates: "Jun 2023 - Sep 2023",
       active: true,
+      image: virtualstagingart,
       description:
-        "Developed and continuously managed a web application for petrol bunk dealers, enabling seamless credit management, comprehensive bill tracking, and gaining client and dealer recognition.",
-      technologies: ["Flask", "Python", "Postgres", "SqlAlchemy", "Jenkins"],
+        "Virtual staging.Art allows users to enhance and transform a vacant or poorly furnished property using computer generated furniture",
+      technologies: ["Next js", "Prisma ORM", "TRPC", "Supabase DB", "Tailwind CSS", "Next js"," Prisma ORM", "Postgre DB",
+        "TRPC"," Tailwind CSS", "and other CSS framework"],
       links: [
         {
-          type: "Repository",
-          href: "https://github.com/VijeshVS/rssbuddy",
+          type: "Website",
+          href: "https://www.virtualstaging.art/en",
+          icon: <Icons.github className="h-4 w-4" />,
+        },
+      ],
+    },
+    {
+      title: "Paraform",
+      dates: "Jun 2023 - Sep 2023",
+      active: true,
+      image: paraform,
+      href: "https://www.paraform.com/",
+      description:
+        "Paraform is a talent platform where startups post referral bounties for open roles and anyone can claim that by successfully referring someone",
+      technologies: ["Next js", "Prisma ORM", "TRPC", "Postgre DB", "Tailwind CSS", "TanStack"],
+      links: [
+        {
+          type: "Website",
+          href: "https://www.paraform.com/",
           icon: <Icons.github className="h-4 w-4" />,
         },
       ],
     },
   ],
-  hackathons: [
+  awards: [
     {
-      title: "GenAI Hackathon",
-      dates: "November 29,2024",
-      location: "RV College of Engineering Bangalore",
+      title: "Swinburne Emerging Leader Program",
+      dates: "Nov, 2024",
+      location: "Swinburne University of Technology ",
       description:
-        "Built an AI-powered workflow to help doctors diagnose diseases faster. The AI interacts with patients to gather information and arrive at a preliminary diagnosis, which is then sent to doctors for review. Doctors can review the report, add medications or remarks, and finalize the diagnosis. Patients can view the finalized report and prescriptions through their portal.",
+        "The Swinburne Emerging Leader Program is an initiative designed to identify and nurture high-potential students, providing them with opportunities to develop critical leadership skills and enhance their employability through practical experiences and mentorship, preparing them for future professional roles within their chosen fields",
       image: "/acc.jpeg",
       links: [
         {
