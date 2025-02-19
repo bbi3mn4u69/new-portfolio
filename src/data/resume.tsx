@@ -12,7 +12,7 @@ import paraform from "@/../public/icons/paraform.png";
 export const DATA = {
   name: "Huy",
   initials: "QHP",
-  url: "https://vijesh.vercel.app",
+  url: "https://new-portfolio-lake-sigma.vercel.app/",
   location: "Hanoi, Vietnam",
   locationLink:
     "https://lh5.googleusercontent.com/p/AF1QipPz_1tNzJsMmm3EfrKGJneK8WNp_MYrcDn4r_zI=w533-h240-k-no",
