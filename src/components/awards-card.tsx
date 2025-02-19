@@ -15,7 +15,7 @@ interface Props {
   }[];
 }
 
-export function HackathonCard({
+export function AwardsCard({
   title,
   description,
   dates,
