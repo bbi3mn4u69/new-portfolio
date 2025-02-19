@@ -1,1 +1,1 @@
-Portfolio Website built using magicUI
+my personal resume website
