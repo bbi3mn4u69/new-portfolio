@@ -19,7 +19,7 @@ export const DATA = {
   description: "Full Stack Developer",
   summary:
     "I am currently pursuing a Software Development major at Swinburne University of Technology in Australia. I am deeply passionate about web development and blockchain technology, and have gained practical experience in building full-stack applications.",
-  avatarUrl: "icons/huy.jpeg",
+  avatarUrl: "/icons/huy.jpeg",
   skills: [
     "Next.js",
     "React",
