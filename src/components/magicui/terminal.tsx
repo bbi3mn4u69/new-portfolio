@@ -174,15 +174,19 @@ export const Terminal = ({
     const initialScrollTimeout = setTimeout(() => {
       const intervalId = setInterval(() => {
         if (preRef.current) {
-          preRef.current.scrollTo({
-            top: preRef.current.scrollHeight,
-            behavior: "smooth",
-          });
+          const { scrollHeight, scrollTop, clientHeight } = preRef.current;
+          const isAtBottom = scrollHeight - scrollTop === clientHeight;
+          if (!isAtBottom) {
+            preRef.current.scrollTo({
+              top: preRef.current.scrollHeight,
+              behavior: "smooth",
+            });
+          }
+          return () => {
+            clearInterval(intervalId);
+          };
         }
       }, 2000);
-      return () => {
-        clearInterval(intervalId);
-      };
     }, 7000);
 
     return () => {

@@ -10,7 +10,7 @@ import {
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { IoTerminalOutline } from "react-icons/io5";
+import { IoTerminal } from "react-icons/io5";
 import { TerminalDemo } from "@/app/components/IntroTerminal";
 import { useState } from "react";
 import { createPortal } from "react-dom";
@@ -76,7 +76,7 @@ export default function Navbar() {
                 )}
                 onClick={() => setTerminalOpen(!isTerminalOpen)}
               >
-                <IoTerminalOutline className="size-4" />
+                <IoTerminal className="size-4" />
               </div>
             </TooltipTrigger>
             <TooltipContent>

@@ -43,7 +43,7 @@ export const DATA = {
     "SQL",
     "Kotlin",
     "Swift",
-    "PHP"
+    "PHP",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -72,7 +72,7 @@ export const DATA = {
         navbar: false,
       },
       email: {
-        name: "Send Email",
+        name: "Email",
         url: "mailto:qh.namviet@gmail.com",
         icon: Icons.email,
         navbar: true,
@@ -286,8 +286,7 @@ Tech Stack: Next.js, Typescript, Postgres, Tailwind, GCP`,
       title: "International Science and Engineering Fair Finalist",
       dates: "Dec, 2022",
       location: "Atlanta, Georgia",
-      description:
-        `The International Science and Engineering Fair (ISEF) is an annual science competition for high school students. It's considered the top pre-college science competition in the world.`,
+      description: `The International Science and Engineering Fair (ISEF) is an annual science competition for high school students. It's considered the top pre-college science competition in the world.`,
       // technologies: [""],
       image: "/isef.png",
       links: [
@@ -302,8 +301,7 @@ Tech Stack: Next.js, Typescript, Postgres, Tailwind, GCP`,
       title: "Vietnam Science and Engineering Fair Champion",
       dates: "Oct, 2022",
       location: "Hanoi, Vietnam",
-      description:
-        `The "Vietnam Science and Engineering Fair" (ViSEF) is a national-level competition in Vietnam where high school students showcase their science and engineering projects, essentially serving as the Vietnamese qualifier for the international "International Science and Engineering Fair" (ISEF) where students can compete against peers from around the world; it is organized by the Vietnamese Ministry of Education and Training`,
+      description: `The "Vietnam Science and Engineering Fair" (ViSEF) is a national-level competition in Vietnam where high school students showcase their science and engineering projects, essentially serving as the Vietnamese qualifier for the international "International Science and Engineering Fair" (ISEF) where students can compete against peers from around the world; it is organized by the Vietnamese Ministry of Education and Training`,
       // technologies: [""],
       image: "/visef.png",
       links: [
@@ -323,8 +321,7 @@ Tech Stack: Next.js, Typescript, Postgres, Tailwind, GCP`,
       title: "Vietnam Science and Engineering Fair - 2nd - district-level",
       dates: "Oct, 2021",
       location: "Hanoi, Vietnam",
-      description:
-        `The "Vietnam Science and Engineering Fair" (ViSEF) is a national-level competition in Vietnam where high school students showcase their science and engineering projects, essentially serving as the Vietnamese qualifier for the international "International Science and Engineering Fair" (ISEF) where students can compete against peers from around the world; it is organized by the Vietnamese Ministry of Education and Training`,
+      description: `The "Vietnam Science and Engineering Fair" (ViSEF) is a national-level competition in Vietnam where high school students showcase their science and engineering projects, essentially serving as the Vietnamese qualifier for the international "International Science and Engineering Fair" (ISEF) where students can compete against peers from around the world; it is organized by the Vietnamese Ministry of Education and Training`,
       // technologies: [""],
       image: "/visef.png",
       links: [
