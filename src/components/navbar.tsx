@@ -74,7 +74,7 @@ export default function Navbar() {
                   buttonVariants({ variant: "ghost", size: "icon" }),
                   "size-12"
                 )}
-                onClick={() => setTerminalOpen(true)}
+                onClick={() => setTerminalOpen(!isTerminalOpen)}
               >
                 <IoTerminalOutline className="size-4" />
               </div>
