@@ -58,7 +58,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "overflow-hidden",
+          "overflow-x-hidden",
           fontSans.variable
         )}
       >
