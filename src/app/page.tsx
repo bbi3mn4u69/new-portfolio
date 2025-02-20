@@ -25,14 +25,22 @@ import { AnimatedListDemo } from "./components/Notification";
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 20000);
+  const [isLoading, setIsLoading] = useState<boolean | null>(null);
 
-    return () => clearTimeout(timer);
-  }, []);
+  useEffect(() => {
+    const savedLoadingState = localStorage.getItem("initialIntro");
+    setIsLoading(
+      savedLoadingState === null ? true : JSON.parse(savedLoadingState)
+    );
+    if (isLoading) {
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+        localStorage.setItem("initialIntro", "false");
+      }, 20000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [isLoading]);
 
   if (isLoading) {
     return (

@@ -1,6 +1,6 @@
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { ModeToggle } from "@/components/mode-toggle";
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import {
   Tooltip,
@@ -10,8 +10,15 @@ import {
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { IoTerminalOutline } from "react-icons/io5";
+import { TerminalDemo } from "@/app/components/IntroTerminal";
+import { useState } from "react";
+import { createPortal } from "react-dom";
 
 export default function Navbar() {
+  const [isTerminalOpen, setTerminalOpen] = useState(false);
+  console.log(isTerminalOpen);
+
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex origin-bottom h-full max-h-14">
       <div className="fixed bottom-0 inset-x-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background"></div>
@@ -59,6 +66,24 @@ export default function Navbar() {
               </Tooltip>
             </DockIcon>
           ))}
+        <DockIcon key={"terminal"}>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <div
+                className={cn(
+                  buttonVariants({ variant: "ghost", size: "icon" }),
+                  "size-12"
+                )}
+                onClick={() => setTerminalOpen(true)}
+              >
+                <IoTerminalOutline className="size-4" />
+              </div>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Fun Terminal</p>
+            </TooltipContent>
+          </Tooltip>
+        </DockIcon>
         <Separator orientation="vertical" className="h-full py-2" />
         <DockIcon>
           <Tooltip>
@@ -71,6 +96,14 @@ export default function Navbar() {
           </Tooltip>
         </DockIcon>
       </Dock>
+      {isTerminalOpen &&
+        createPortal(
+          <TerminalDemo
+            setTerminalOpen={setTerminalOpen}
+            isTerminalOpen={isTerminalOpen}
+          ></TerminalDemo>,
+          document.body
+        )}
     </div>
   );
 }

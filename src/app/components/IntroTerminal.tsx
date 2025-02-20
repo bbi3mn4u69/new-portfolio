@@ -3,10 +3,28 @@ import {
   Terminal,
   TypingAnimation,
 } from "@/components/magicui/terminal";
+import { Input } from "@/components/ui/input";
+import { useEffect, useRef } from "react";
+interface TerminalDemoProps {
+  setTerminalOpen?: React.Dispatch<React.SetStateAction<boolean>>;
+  isTerminalOpen?: boolean;
+}
 
-export function TerminalDemo() {
+export function TerminalDemo({
+  setTerminalOpen,
+  isTerminalOpen,
+}: TerminalDemoProps) {
+  const inputRef = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    const focusInput = () => inputRef.current?.focus();
+    focusInput();
+    inputRef.current?.addEventListener("blur", focusInput);
+    return () => {
+      inputRef.current?.removeEventListener("blur", focusInput);
+    };
+  }, []);
   return (
-    <Terminal>
+    <Terminal setTerminalOpen={setTerminalOpen} isTerminalOpen={isTerminalOpen}>
       <TypingAnimation>
         &gt; sudo find awesome-developer --location "Vietnam"
       </TypingAnimation>
@@ -48,7 +66,7 @@ export function TerminalDemo() {
       </AnimatedSpan>
 
       <AnimatedSpan delay={8900} className="text-green-500">
-        <span>🚀 Current Mission:</span>
+        <span>🚀 Prev Mission:</span>
         <span className="pl-2">
           Crafting digital wonders @ Lyra Technologies
         </span>
@@ -63,7 +81,10 @@ export function TerminalDemo() {
         <span className="pl-2">- Uncontrollable desire to optimize code</span>
       </AnimatedSpan>
 
-      <TypingAnimation delay={10900} className="text-muted-foreground whitespace-pre-wrap break-words">
+      <TypingAnimation
+        delay={10900}
+        className="text-muted-foreground whitespace-pre-wrap break-words"
+      >
         Player profile loaded! Ready to tackle new coding adventures...
       </TypingAnimation>
 
@@ -74,6 +95,13 @@ export function TerminalDemo() {
         Type 'hire --dev quanghuy --mode beast' to recruit this legendary
         developer...
       </TypingAnimation>
+      {/* <code>
+        <Input
+          ref={inputRef}
+          className="border-none p-0 caret-black cursor-default"
+          autoFocus
+        />
+      </code> */}
     </Terminal>
   );
 }
