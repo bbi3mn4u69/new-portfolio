@@ -192,11 +192,11 @@ export default function Page() {
                   </div>
                 </div>
               </BlurFade>
-              <div className=" max-w-[800px] mx-auto h-full ">
-                <Carousel className="w-full h-full">
+              <div className=" sm:max-w-[800px] mx-auto h-full max-w-48">
+                <Carousel className="w-full ">
                   <CarouselContent>
                     {DATA.projects.map((project, id) => (
-                      <CarouselItem key={id} className="basis-1/2 pt-3">
+                      <CarouselItem key={id} className="sm:basis-1/2 pt-3">
                         <BlurFade
                           key={project.title}
                           delay={BLUR_FADE_DELAY * 12 + id * 0.05}
