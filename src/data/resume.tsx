@@ -7,6 +7,7 @@ import { GrCertificate } from "react-icons/gr";
 import tip from "@/../public/icons/tip.png";
 import virtualstagingart from "@/../public/icons/virtualstagingart.png";
 import paraform from "@/../public/icons/paraform.png";
+import tradingPlatform from "@/../public/trading_platform.png";
 
 export const DATA = {
   name: "Huy",
@@ -246,6 +247,23 @@ Tech Stack: Next.js, Typescript, Postgres, Tailwind, GCP`,
           type: "Website",
           href: "https://www.paraform.com/",
           icon: <Icons.globe className="h-4 w-4" />,
+        },
+      ],
+    },
+    {
+      title: "Trading Platform",
+      dates: "Oct 2023 - Mar 2023",
+      active: true,
+      image: tradingPlatform,
+      href: "#",
+      description: `Full Stack Trading Platform with React, Tailwinds, Nodejs, D3js chart and Solidity smart contract. 
+The project features smooth Tailwind CSS animations, full responsiveness, and secure credential authentication. It supports search and filter functions, buying and selling of cryptocurrencies through smart contracts, and real-time transaction history and balance updates. React Toast handles error notifications, while D3 candlestick charts and hover tooltips display detailed crypto data. The backend includes an efficient API design for seamless blockchain integration.`,
+      technologies: ["React", "Tailwind CSS", "Node js", "D3 js", "Solidity"],
+      links: [
+        {
+          type: "GitHub",
+          href: "https://github.com/bbi3mn4u69/COS30049-Computing_Technology_Innovation_Project",
+          icon: <Icons.github className="h-4 w-4" />,
         },
       ],
     },

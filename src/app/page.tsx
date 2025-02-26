@@ -12,6 +12,13 @@ import Markdown from "react-markdown";
 import { Meteors } from "@/components/magicui/meteors";
 import { CoolMode } from "@/components/magicui/cool-mode";
 import Navbar from "@/components/navbar";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 import {
   AnimatedSpan,
@@ -185,25 +192,33 @@ export default function Page() {
                   </div>
                 </div>
               </BlurFade>
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-                {DATA.projects.map((project, id) => (
-                  <BlurFade
-                    key={project.title}
-                    delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-                  >
-                    <ProjectCard
-                      href={project.href}
-                      key={project.title}
-                      title={project.title}
-                      description={project.description}
-                      dates={project.dates}
-                      tags={project.technologies}
-                      image={project.image}
-                      video={project.video}
-                      links={project.links}
-                    />
-                  </BlurFade>
-                ))}
+              <div className=" max-w-[800px] mx-auto h-full ">
+                <Carousel className="w-full h-full">
+                  <CarouselContent>
+                    {DATA.projects.map((project, id) => (
+                      <CarouselItem key={id} className="basis-1/2 pt-3">
+                        <BlurFade
+                          key={project.title}
+                          delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                        >
+                          <ProjectCard
+                            href={project.href}
+                            key={project.title}
+                            title={project.title}
+                            description={project.description}
+                            dates={project.dates}
+                            tags={project.technologies}
+                            image={project.image}
+                            video={project.video}
+                            links={project.links}
+                          />
+                        </BlurFade>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </Carousel>
               </div>
             </div>
           </section>
