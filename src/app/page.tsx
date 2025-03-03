@@ -19,12 +19,15 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Button } from "@/components/ui/button";
 
 import {
   AnimatedSpan,
   Terminal,
   TypingAnimation,
 } from "@/components/magicui/terminal";
+import { IoIosArrowRoundForward } from "react-icons/io";
+
 import { useState, useEffect } from "react";
 import { TerminalDemo } from "./components/IntroTerminal";
 import { AnimatedListDemo } from "./components/Notification";
@@ -36,6 +39,7 @@ export default function Page() {
 
   useEffect(() => {
     const savedLoadingState = localStorage.getItem("initialIntro");
+
     setIsLoading(
       savedLoadingState === null ? true : JSON.parse(savedLoadingState)
     );
@@ -44,14 +48,26 @@ export default function Page() {
         setIsLoading(false);
         localStorage.setItem("initialIntro", "false");
       }, 20000);
-
       return () => clearTimeout(timer);
     }
   }, [isLoading]);
 
+  console.log(isLoading);
+
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6">
+      <div className="min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6 ">
+        <Button
+          variant="link"
+          className="text-sm underline underline-offset-2 text-gray-500 hover:text-black duration-300 ease-in-out absolute top-3 right-3 "
+          onClick={() => {
+            setIsLoading(false);
+            localStorage.setItem("initialIntro", "false");
+          }}
+        >
+          skip
+          <IoIosArrowRoundForward className="w-5 h-5" />
+        </Button>
         <div className="w-full min-h-full flex justify-center items-center">
           <TerminalDemo></TerminalDemo>
         </div>
