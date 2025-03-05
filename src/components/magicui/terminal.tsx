@@ -29,7 +29,7 @@ export const AnimatedSpan = ({
     initial={{ opacity: 0, y: -5 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.3, delay: delay / 1000 }}
-    className={cn("grid sm:text-sm text-xs font-normal tracking-tight", className)}
+    className={cn("grid sm:text-sm text-xs font-normal tracking-tight overflow-x-hidden whitespace-pre-wrap break-words", className)}
     {...props}
   >
     {children}
@@ -198,7 +198,7 @@ export const Terminal = ({
       const width = window.innerWidth;
       const height = window.innerHeight;
       const elementWidth = width < 640 ? 300 : 512; // 300px for mobile, 512px for desktop
-      const elementHeight = width < 640 ? 600 : 900; // 200px for mobile, 700px for desktop
+      const elementHeight = width < 640 ? 500 : 900; // 200px for mobile, 700px for desktop
       
       const centerX = (width - elementWidth) / 2;
       const centerY = (height - elementHeight) / 2;
