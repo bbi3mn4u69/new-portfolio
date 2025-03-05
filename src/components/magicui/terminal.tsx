@@ -29,7 +29,7 @@ export const AnimatedSpan = ({
     initial={{ opacity: 0, y: -5 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.3, delay: delay / 1000 }}
-    className={cn("grid text-sm font-normal tracking-tight", className)}
+    className={cn("grid sm:text-sm text-xs font-normal tracking-tight", className)}
     {...props}
   >
     {children}
@@ -114,9 +114,7 @@ export const Terminal = ({
   isTerminalOpen,
 }: TerminalProps) => {
   const preRef = useRef<HTMLPreElement>(null);
-  const centerX = (window.innerWidth - 512) / 2;
-  const centerY = (window.innerHeight - 700) / 2;
-  const [position, setPosition] = React.useState({ x: centerX, y: centerY });
+  const [position, setPosition] = React.useState({ x: 0, y: 0 });
   const [pressed, setPressed] = React.useState<boolean>(false);
   const [dragged, setDragged] = React.useState<boolean>(false);
   const [initial, setInitial] = React.useState<{ x: number; y: number } | null>(
@@ -194,6 +192,25 @@ export const Terminal = ({
     };
   }, [children]);
 
+  // Calculate center position on mount and window resize
+  useEffect(() => {
+    const calculateCenter = () => {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      const elementWidth = width < 640 ? 300 : 512; // 300px for mobile, 512px for desktop
+      const elementHeight = width < 640 ? 600 : 900; // 200px for mobile, 700px for desktop
+      
+      const centerX = (width - elementWidth) / 2;
+      const centerY = (height - elementHeight) / 2;
+      
+      setPosition({ x: centerX, y: centerY });
+    };
+
+    calculateCenter();
+    window.addEventListener('resize', calculateCenter);
+    return () => window.removeEventListener('resize', calculateCenter);
+  }, []);
+
   return (
     <div
       style={{
@@ -203,7 +220,7 @@ export const Terminal = ({
         userSelect: "none",
       }}
       className={cn(
-        "z-0 h-[500px] w-full max-w-lg rounded-xl border border-border bg-background",
+        "z-0 h-[500px] sm:w-full w-[300px] mx-auto sm:mx-0 text-sm sm:max-w-lg rounded-xl border border-border bg-background",
         className
       )}
     >
@@ -221,7 +238,7 @@ export const Terminal = ({
         </div>
       </div>
       <pre ref={preRef} className="p-4 h-[450px] overflow-y-auto scroll-smooth">
-        <code className="grid gap-y-1 pl-3">{children}</code>
+        <code className="grid gap-y-1 pl-3 text-xs sm:text-base">{children}</code>
       </pre>
     </div>
   );
