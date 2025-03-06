@@ -8,6 +8,7 @@ import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { Meteors } from "@/components/magicui/meteors";
 
+
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
     siteName: `${DATA.name}`,
     locale: "en_US",
     type: "website",
+    images: "/icons/qhp.jpeg",
   },
   robots: {
     index: true,
