@@ -29,7 +29,7 @@ export const AnimatedSpan = ({
     initial={{ opacity: 0, y: -5 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.3, delay: delay / 1000 }}
-    className={cn("grid sm:text-sm text-xs font-normal tracking-tight overflow-x-hidden whitespace-pre-wrap break-words", className)}
+    className={cn("grid sm:text-sm text-xs font-normal tracking-tight ", className)}
     {...props}
   >
     {children}
@@ -198,7 +198,7 @@ export const Terminal = ({
       const width = window.innerWidth;
       const height = window.innerHeight;
       const elementWidth = width < 640 ? 300 : 512; // 300px for mobile, 512px for desktop
-      const elementHeight = width < 640 ? 500 : 900; // 200px for mobile, 700px for desktop
+      const elementHeight = width < 640 ? 500 : 700; // 200px for mobile, 700px for desktop
       
       const centerX = (width - elementWidth) / 2;
       const centerY = (height - elementHeight) / 2;
@@ -237,8 +237,8 @@ export const Terminal = ({
           <div className="h-3 w-3 rounded-full bg-green-500 cursor-pointer"></div>
         </div>
       </div>
-      <pre ref={preRef} className="p-4 h-[450px] overflow-y-auto scroll-smooth">
-        <code className="grid gap-y-1 pl-3 text-xs sm:text-base">{children}</code>
+      <pre ref={preRef} className="p-4 h-[450px] overflow-y-auto scroll-smooth sm:overflow-x-hidden overflow-visible whitespace-pre-wrap break-words">
+        <code className="grid gap-y-1 px-3 text-xs sm:text-base ">{children}</code>
       </pre>
     </div>
   );
