@@ -45,8 +45,8 @@ export default function Page() {
     );
     if (isLoading) {
       const timer = setTimeout(() => {
-        setIsLoading(true);
-        // localStorage.setItem("initialIntro", "false");
+        setIsLoading(false);
+        localStorage.setItem("initialIntro", "false");
       }, 20000);
       return () => clearTimeout(timer);
     }
