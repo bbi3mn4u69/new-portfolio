@@ -26,7 +26,7 @@ export function TerminalDemo({
   return (
     <Terminal setTerminalOpen={setTerminalOpen} isTerminalOpen={isTerminalOpen}>
       <TypingAnimation>
-        &gt; sudo find awesome-developer --location "Vietnam"
+        &gt; sudo find awesome-developer --location "Melbourne - Australia"
       </TypingAnimation>
 
       <AnimatedSpan delay={3900} className="text-yellow-500">
