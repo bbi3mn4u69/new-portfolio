@@ -17,7 +17,7 @@ export const DATA = {
   locationLink: "",
   description: "Full Stack Developer",
   summary:
-    "I am currently pursuing a Software Development major at Swinburne University of Technology in Australia. I am deeply passionate about web development and blockchain technology, and have gained practical experience in building full-stack applications.",
+    "I graduated from Swinburne University of Technology in Australia with a Software Development major. I am deeply passionate about web development and blockchain technology, and have gained practical experience in building full-stack applications. I currently pursuing a Master of Artificial Intelligence at RMIT University in Melbourne, Australia.",
   avatarUrl: "/icons/qhp.jpeg",
   skills: [
     "Next.js",
@@ -98,6 +98,14 @@ Tech Stack: Next.js, Typescript, Postgres, Tailwind, GCP`,
     },
   ],
   education: [
+    {
+      school: "RMIT University",
+      href: "https://www.rmit.edu.au",
+      degree: "Master of Artificial Intelligence @ RMIT University",
+      logoUrl: "icons/rmit.png",
+      start: "2025",
+      end: "2027",
+    },
     {
       school: "Swinburne University of Technology",
       href: "https://www.swinburne.edu.au",

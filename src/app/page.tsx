@@ -24,7 +24,7 @@ import { Button } from "@/components/ui/button";
 import {
   AnimatedSpan,
   Terminal,
-  TypingAnimation,
+  TypingAnimation
 } from "@/components/magicui/terminal";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
@@ -57,7 +57,7 @@ export default function Page() {
       <div className="min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6 ">
         <Button
           variant="link"
-          className="text-sm underline underline-offset-2 text-gray-500 hover:text-black duration-300 ease-in-out absolute top-3 right-3 "
+          className="text-sm underline underline-offset-2 text-gray-500 hover:text-black dark:hover:text-white duration-300 ease-in-out absolute top-3 right-3 "
           onClick={() => {
             setIsLoading(false);
             localStorage.setItem("initialIntro", "false");
@@ -85,17 +85,17 @@ export default function Page() {
             <div className="mx-auto w-full max-w-2xl space-y-8">
               <div className="gap-2 flex justify-between">
                 <div className="flex-col justify-center flex flex-1 space-y-1.5">
-                  <BlurFadeText
-                    delay={BLUR_FADE_DELAY}
-                    className="text-2xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
-                    yOffset={8}
-                    text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
-                  />
-                  <BlurFadeText
-                    className="max-w-[600px] text-sm md:text-xl"
-                    delay={BLUR_FADE_DELAY}
-                    text={DATA.description}
-                  />
+                    <BlurFadeText
+                      delay={BLUR_FADE_DELAY}
+                      className="text-2xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+                      yOffset={8}
+                      text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
+                    />
+                    <BlurFadeText
+                      className="max-w-[600px] text-sm md:text-xl"
+                      delay={BLUR_FADE_DELAY}
+                      text={DATA.description}
+                    />
                 </div>
                 <BlurFade delay={BLUR_FADE_DELAY}>
                   <CoolMode>
@@ -206,33 +206,27 @@ export default function Page() {
                   </div>
                 </div>
               </BlurFade>
-              <div className=" sm:max-w-[800px] mx-auto h-full max-w-48">
-                <Carousel className="w-full ">
-                  <CarouselContent>
-                    {DATA.projects.map((project, id) => (
-                      <CarouselItem key={id} className="sm:basis-1/2 pt-3">
-                        <BlurFade
-                          key={project.title}
-                          delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-                        >
-                          <ProjectCard
-                            href={project.href}
-                            key={project.title}
-                            title={project.title}
-                            description={project.description}
-                            dates={project.dates}
-                            tags={project.technologies}
-                            image={project.image}
-                            video={project.video}
-                            links={project.links}
-                          />
-                        </BlurFade>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious />
-                  <CarouselNext />
-                </Carousel>
+              <div className="sm:max-w-[900px] mx-auto h-full w-full">
+                <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 ">
+                  {DATA.projects.map((project, id) => (
+                    <BlurFade
+                      key={project.title}
+                      delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                    >
+                      <ProjectCard
+                        href={project.href}
+                        key={project.title}
+                        title={project.title}
+                        description={project.description}
+                        dates={project.dates}
+                        tags={project.technologies}
+                        image={project.image}
+                        video={project.video}
+                        links={project.links}
+                      />
+                    </BlurFade>
+                  ))}
+                </div>
               </div>
             </div>
           </section>

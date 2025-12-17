@@ -2,6 +2,7 @@ import { Dock, DockIcon } from "@/components/magicui/dock";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import {
   Tooltip,
   TooltipContent,
@@ -17,7 +18,6 @@ import { createPortal } from "react-dom";
 
 export default function Navbar() {
   const [isTerminalOpen, setTerminalOpen] = useState(false);
-  console.log(isTerminalOpen);
 
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex origin-bottom h-full max-h-14">
@@ -85,15 +85,16 @@ export default function Navbar() {
           </Tooltip>
         </DockIcon>
         <Separator orientation="vertical" className="h-full py-2" />
-        <DockIcon>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <ModeToggle />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Theme</p>
-            </TooltipContent>
-          </Tooltip>
+        <DockIcon key="theme">
+            <AnimatedThemeToggler />
+          {/* <Tooltip>
+              <TooltipTrigger asChild>
+                
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Theme</p>
+              </TooltipContent>
+            </Tooltip> */}
         </DockIcon>
       </Dock>
       {isTerminalOpen &&
