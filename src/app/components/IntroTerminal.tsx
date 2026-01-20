@@ -44,7 +44,7 @@ export function TerminalDemo({
 
       <AnimatedSpan delay={5900} className="text-blue-500">
         <span>📚 Education Quest Progress:</span>
-        <span className="pl-2">- Swinburne University: 75% completed</span>
+        <span className="pl-2">- Swinburne University: Completed</span>
         <span className="pl-2">- Achievement Unlocked: GPA 3.65 🌟</span>
       </AnimatedSpan>
 
