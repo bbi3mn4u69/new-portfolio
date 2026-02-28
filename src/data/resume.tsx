@@ -81,17 +81,7 @@ export const DATA = {
     },
   },
   work: [
-    {
-      company: "VirtualStaging",
-      href: "https://www.virtualstaging.art/en",
-      badges: [],
-      location: "Sydney, Australia",
-      title: "Software Developer - Contract",
-      logoUrl: "icons/virtual-staging.webp",
-      start: "Apr 2023",
-      end: "Jun 2023",
-      description: "Integrated advanced virtual staging API with a seamless UI for real-time property enhancement. Led image upload and rendering system that supported large image data processing.",
-    },
+
     {
       company: "Tipriyo",
       href: "https://www.tipriyo.ai/",
@@ -114,6 +104,19 @@ export const DATA = {
       end: "Jan 2024",
       description: "Embedded GPT-4 Mini to monitor real-time data flows and auto-detect user errors. Developed internal dashboards for admin-level data monitoring and analytics.",
     },
+    
+    {
+      company: "VirtualStaging",
+      href: "https://www.virtualstaging.art/en",
+      badges: [],
+      location: "Sydney, Australia",
+      title: "Software Developer - Contract",
+      logoUrl: "icons/virtual-staging.webp",
+      start: "Apr 2023",
+      end: "Jun 2023",
+      description: "Integrated advanced virtual staging API with a seamless UI for real-time property enhancement. Led image upload and rendering system that supported large image data processing.",
+    },
+    
   ],
   education: [
     {
