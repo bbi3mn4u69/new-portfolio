@@ -13,7 +13,7 @@ export const DATA = {
   name: "Huy",
   initials: "QHP",
   url: "https://new-portfolio-lake-sigma.vercel.app/",
-  location: "Hanoi, Vietnam",
+  location: "Melbourne, Australia",
   locationLink: "",
   description: "Full Stack Developer",
   summary:
@@ -82,19 +82,37 @@ export const DATA = {
   },
   work: [
     {
-      company: "Lyra Technologies",
-      href: "https://www.lyratechnologies.com.au/",
+      company: "VirtualStaging",
+      href: "https://www.virtualstaging.art/en",
       badges: [],
-      location: "RVCE, Bangalore",
-      title: "Junior Web Developer",
-      logoUrl: "icons/lyra-logo.svg",
-      start: "Dec 2023",
-      end: "Dec 2024",
-      description: `Lyra is a leading digital product studio that helps startups and scale-ups design, build, and ship incredible products.
-
-As a software engineer, I have worked with key stakeholders on delivering successful products to companies such as Concept Education and VirtualStaging.art.
-
-Tech Stack: Next.js, Typescript, Postgres, Tailwind, GCP`,
+      location: "Sydney, Australia",
+      title: "Software Developer - Contract",
+      logoUrl: "icons/virtual-staging.webp",
+      start: "Apr 2023",
+      end: "Jun 2023",
+      description: "Integrated advanced virtual staging API with a seamless UI for real-time property enhancement. Led image upload and rendering system that supported large image data processing.",
+    },
+    {
+      company: "Tipriyo",
+      href: "https://www.tipriyo.ai/",
+      badges: [],
+      location: "Sydney, Australia",
+      title: "Software Developer - Contract",
+      logoUrl: "icons/tipriyo-logo.png",
+      start: "Jun 2023",
+      end: "Aug 2023",
+      description: "Engineered credit-based logic for real-time image generation and multilingual support using Supabase and GPT API. Designed scalable backend for handling high-volume image processing with optimized SEO integration."
+    },
+    {
+      company: "Paraform",
+      href: "https://www.paraform.com/",
+      badges: [],
+      location: "Sydney, Australia",
+      title: "Software Developer - Contract",
+      logoUrl: "icons/paraform-logo.png",
+      start: "Aug 2023",
+      end: "Jan 2024",
+      description: "Embedded GPT-4 Mini to monitor real-time data flows and auto-detect user errors. Developed internal dashboards for admin-level data monitoring and analytics.",
     },
   ],
   education: [
@@ -113,14 +131,6 @@ Tech Stack: Next.js, Typescript, Postgres, Tailwind, GCP`,
       logoUrl: "icons/swinburne.png",
       start: "2022",
       end: "2025",
-    },
-    {
-      school: "Phan Huy Chu - Dong Da Highschool",
-      href: "https://www.phc.edu.vn/",
-      degree: "GPA: 9.1",
-      logoUrl: "icons/phanhuychu.png",
-      start: "2019",
-      end: "2022",
     },
   ],
   projects: [
@@ -149,31 +159,30 @@ Tech Stack: Next.js, Typescript, Postgres, Tailwind, GCP`,
         },
       ],
     },
-    {
-      title: "Soma Capital",
-      href: "https://somacap.com/",
-      dates: "March 2024 - June 2024",
-      active: true,
-      description:
-        "Soma Capital is a venture capital firm that invests in startups that use technology to improve humanity",
-      technologies: [
-        "Next.js",
-        "Prisma ORM",
-        "TRPC",
-        "Postgre DB",
-        "Tailwind CSS",
-        "Tremo CSS framework",
-      ],
-      image: soma,
-      links: [
-        {
-          type: "Website",
-          href: "https://somacap.com/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-    },
-
+    // {
+    //   title: "Soma Capital",
+    //   href: "https://somacap.com/",
+    //   dates: "March 2024 - June 2024",
+    //   active: true,
+    //   description:
+    //     "Soma Capital is a venture capital firm that invests in startups that use technology to improve humanity",
+    //   technologies: [
+    //     "Next.js",
+    //     "Prisma ORM",
+    //     "TRPC",
+    //     "Postgre DB",
+    //     "Tailwind CSS",
+    //     "Tremo CSS framework",
+    //   ],
+    //   image: soma,
+    //   links: [
+    //     {
+    //       type: "Website",
+    //       href: "https://somacap.com/",
+    //       icon: <Icons.globe className="size-3" />,
+    //     },
+    //   ],
+    // },
     {
       title: "Tipriyo",
       dates: "Nov 2023 – Jan 2024",

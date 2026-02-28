@@ -42,11 +42,13 @@ export function TerminalDemo({
         </span>
       </AnimatedSpan>
 
-      <AnimatedSpan delay={5900} className="text-blue-500">
+      <AnimatedSpan delay={5900} className="text-blue-500">  
         <span>📚 Education Quest Progress:</span>
         <span className="pl-2">- Swinburne University: Completed</span>
         <span className="pl-2">- Achievement Unlocked: GPA 3.65 🌟</span>
+        <span className="pl-2">- RMIT University: In Progress</span>
       </AnimatedSpan>
+      
 
       <AnimatedSpan delay={6900} className="text-purple-500">
         <span>🎯 Skill Tree Unlocked:</span>
@@ -68,7 +70,7 @@ export function TerminalDemo({
       <AnimatedSpan delay={8900} className="text-green-500">
         <span>🚀 Prev Mission:</span>
         <span className="pl-2">
-          Crafting digital wonders @ Lyra Technologies
+          Crafting digital wonders @ VirtualStaging, Tipriyo, Paraform
         </span>
         <span className="pl-2">Status: Turning bugs into features</span>
       </AnimatedSpan>
