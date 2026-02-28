@@ -81,18 +81,6 @@ export const DATA = {
     },
   },
   work: [
-
-    {
-      company: "Tipriyo",
-      href: "https://www.tipriyo.ai/",
-      badges: [],
-      location: "Sydney, Australia",
-      title: "Software Developer - Contract",
-      logoUrl: "icons/tipriyo-logo.png",
-      start: "Jun 2023",
-      end: "Aug 2023",
-      description: "Engineered credit-based logic for real-time image generation and multilingual support using Supabase and GPT API. Designed scalable backend for handling high-volume image processing with optimized SEO integration."
-    },
     {
       company: "Paraform",
       href: "https://www.paraform.com/",
@@ -102,9 +90,22 @@ export const DATA = {
       logoUrl: "icons/paraform-logo.png",
       start: "Aug 2023",
       end: "Jan 2024",
-      description: "Embedded GPT-4 Mini to monitor real-time data flows and auto-detect user errors. Developed internal dashboards for admin-level data monitoring and analytics.",
+      description:
+        "Embedded GPT-4 Mini to monitor real-time data flows and auto-detect user errors. Developed internal dashboards for admin-level data monitoring and analytics.",
     },
-    
+    {
+      company: "Tipriyo",
+      href: "https://www.tipriyo.ai/",
+      badges: [],
+      location: "Sydney, Australia",
+      title: "Software Developer - Contract",
+      logoUrl: "icons/tipriyo-logo.png",
+      start: "Jun 2023",
+      end: "Aug 2023",
+      description:
+        "Engineered credit-based logic for real-time image generation and multilingual support using Supabase and GPT API. Designed scalable backend for handling high-volume image processing with optimized SEO integration.",
+    },
+
     {
       company: "VirtualStaging",
       href: "https://www.virtualstaging.art/en",
@@ -114,9 +115,9 @@ export const DATA = {
       logoUrl: "icons/virtual-staging.webp",
       start: "Apr 2023",
       end: "Jun 2023",
-      description: "Integrated advanced virtual staging API with a seamless UI for real-time property enhancement. Led image upload and rendering system that supported large image data processing.",
+      description:
+        "Integrated advanced virtual staging API with a seamless UI for real-time property enhancement. Led image upload and rendering system that supported large image data processing.",
     },
-    
   ],
   education: [
     {
