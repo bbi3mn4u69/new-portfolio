@@ -20,12 +20,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
-
-import {
-  AnimatedSpan,
-  Terminal,
-  TypingAnimation
-} from "@/components/magicui/terminal";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 import { useState, useEffect } from "react";

@@ -12,13 +12,13 @@ import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { IoTerminal } from "react-icons/io5";
-import { TerminalDemo } from "@/app/components/IntroTerminal";
+// import { TerminalDemo } from "@/app/components/IntroTerminal";
 import { useState } from "react";
-import { createPortal } from "react-dom";
-
+import { useRouter } from "next/navigation";
+// import { createPortal } from "react-dom";
 export default function Navbar() {
-  const [isTerminalOpen, setTerminalOpen] = useState(false);
-
+  // const [isTerminalOpen, setTerminalOpen] = useState(false);
+  const router = useRouter();
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex origin-bottom h-full max-h-14">
       <div className="fixed bottom-0 inset-x-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background"></div>
@@ -31,7 +31,7 @@ export default function Navbar() {
                   href={item.href}
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "icon" }),
-                    "size-12"
+                    "size-12",
                   )}
                 >
                   <item.icon className="size-4" />
@@ -54,7 +54,7 @@ export default function Navbar() {
                     href={social.url}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12"
+                      "size-12",
                     )}
                   >
                     <social.icon className="size-4" />
@@ -72,9 +72,11 @@ export default function Navbar() {
               <div
                 className={cn(
                   buttonVariants({ variant: "ghost", size: "icon" }),
-                  "size-12"
+                  "size-12",
                 )}
-                onClick={() => setTerminalOpen(!isTerminalOpen)}
+                onClick={() => {
+                  router.push("/funterminal");
+                }}
               >
                 <IoTerminal className="size-4" />
               </div>
@@ -86,7 +88,7 @@ export default function Navbar() {
         </DockIcon>
         <Separator orientation="vertical" className="h-full py-2" />
         <DockIcon key="theme">
-            <AnimatedThemeToggler />
+          <AnimatedThemeToggler />
           {/* <Tooltip>
               <TooltipTrigger asChild>
                 
@@ -97,14 +99,14 @@ export default function Navbar() {
             </Tooltip> */}
         </DockIcon>
       </Dock>
-      {isTerminalOpen &&
+      {/* {isTerminalOpen &&
         createPortal(
           <TerminalDemo
             setTerminalOpen={setTerminalOpen}
             isTerminalOpen={isTerminalOpen}
           ></TerminalDemo>,
           document.body
-        )}
+        )} */}
     </div>
   );
 }

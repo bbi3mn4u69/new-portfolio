@@ -2,7 +2,7 @@ import {
   AnimatedSpan,
   Terminal,
   TypingAnimation,
-} from "@/components/magicui/terminal";
+} from "@/components/ui/terminal";
 import { Input } from "@/components/ui/input";
 import { useEffect, useRef } from "react";
 interface TerminalDemoProps {
@@ -24,7 +24,7 @@ export function TerminalDemo({
     };
   }, []);
   return (
-    <Terminal setTerminalOpen={setTerminalOpen} isTerminalOpen={isTerminalOpen}>
+    <Terminal>
       <TypingAnimation>
         &gt; sudo find awesome-developer --location "Melbourne - Australia"
       </TypingAnimation>
