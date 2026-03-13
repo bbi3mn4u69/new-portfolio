@@ -1,4 +1,16 @@
+import { flushSync } from "react-dom";
+
 export const avaiableCommands = [
+  {
+    command: "theme-dark",
+    description: "Change the theme to dark",
+    response: "Theme changed to dark",
+  },
+  {
+    command: "theme-light",
+    description: "Change the theme to light",
+    response: "Theme changed to light",
+  },
   {
     command: "find-dev",
     description: "Find a developer",
@@ -37,7 +49,12 @@ export const avaiableCommands = [
   {
     command: "help",
     description: "Show help",
-    response: "Available commands:\n\nfind-dev        Locate the developer\nstats           Show developer stats\neducation       Show education history\nskills          Show skill tree\nexperience      Show past missions\nachievements    Show achievements\nwarning         Show creativity warning\nhire --dev quanghuy --mode beast",
+    response: "Available commands:\n\nfind-dev        Locate the developer\ncontact         Show contact information\nstats           Show developer stats\neducation       Show education history\nskills          Show skill tree\nexperience      Show past missions\nachievements    Show achievements\nwarning         Show creativity warning\nhire --dev quanghuy --mode beast",
+  },
+  {
+    command: "contact",
+    description: "Show contact information",
+    response: "Contact information: Email: qh.namviet@gmail.com, Phone: +61 414625358, Address: 1/20 Launder st, Hawthorn, VIC 3122, Australia",
   },
   {
     command: "clear",
@@ -64,6 +81,7 @@ export const avaiableCommands = [
     description: "Hire the developer",
     response: "Developer hired! Initializing Quang Huy.exe...",
   },
+
   {
     command: "coffee",
     description: "Turn coffee into code",
@@ -72,3 +90,37 @@ export const avaiableCommands = [
 ];
 export const initialTerminalArray: string[] =  [
 ];
+
+
+export const toggleTheme = async () => {
+  await document.startViewTransition(() => {
+    flushSync(() => {
+      const newTheme = !document.documentElement.classList.contains("dark")
+      document.documentElement.classList.toggle("dark")
+      localStorage.setItem("theme", newTheme ? "dark" : "light")
+    })
+  }).ready
+
+  const { top, left, width, height } =
+    document.documentElement.getBoundingClientRect()
+  const x = left + width / 2
+  const y = top + height / 2
+  const maxRadius = Math.hypot(
+    Math.max(left, window.innerWidth - left),
+    Math.max(top, window.innerHeight - top)
+  )
+
+  document.documentElement.animate(
+    {
+      clipPath: [
+        `circle(0px at ${x}px ${y}px)`,
+        `circle(${maxRadius}px at ${x}px ${y}px)`,
+      ],
+    },
+    {
+      duration: 400,
+      easing: "ease-in-out",
+      pseudoElement: "::view-transition-new(root)",
+    }
+  )
+}

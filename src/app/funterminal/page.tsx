@@ -10,11 +10,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { avaiableCommands, initialTerminalArray } from "./terminalHelper";
+import {
+  avaiableCommands,
+  initialTerminalArray,
+  toggleTheme,
+} from "./terminalHelper";
 
 export default function FunTerminal() {
   const [terminalArray, setTerminalArray] = useState(initialTerminalArray);
-  const [terminalIndex, setTerminalIndex] = useState(0);
   const terminalScrollRef = useRef<HTMLPreElement | null>(null);
 
   const onSubmit = (huyInput: string) => {
@@ -28,20 +31,19 @@ export default function FunTerminal() {
       setTerminalArray((prev) => [...prev, "Command not found"]);
     } else if (huyInput === "clear") {
       setTerminalArray([]);
-    }else if (huyInput === "exit") {
+    } else if (huyInput === "theme-dark") {
+      setTerminalArray((prev) => [...prev, matchedCommand.response]);
+      toggleTheme();
+    } else if (huyInput === "theme-light") {
+      setTerminalArray((prev) => [...prev, matchedCommand.response]);
+      toggleTheme();
+    } else if (huyInput === "exit") {
       setTerminalArray((prev) => [...prev, "Exiting terminal..."]);
       r.push("/");
     } else {
       setTerminalArray((prev) => [...prev, matchedCommand.response]);
     }
-    setTerminalIndex(terminalIndex + 1);
   };
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setTerminalIndex(terminalIndex + 1);
-    }, 5000);
-    return () => clearTimeout(timer);
-  }, [terminalIndex]);
 
   useEffect(() => {
     const container = terminalScrollRef.current;
@@ -55,7 +57,7 @@ export default function FunTerminal() {
   const r = useRouter();
   return (
     <div className="h-screen w-full">
-      <div className="absolute top-3 left-3">
+      {/* <div className="absolute top-3 left-3">
         <Button
           variant="ghost"
           size="icon"
@@ -67,23 +69,28 @@ export default function FunTerminal() {
       </div>
       <div className="absolute top-3 right-3">
         <AnimatedThemeToggler className="border rounded-xl px-3 py-2 size-10" />
-      </div>
-      <div className="h-full w-full mx-auto pt-12 sm:pt-16 px-3 pb-3">
+      </div> */}
+      <div className="h-full w-full mx-auto pt-3 sm:pt-3 px-3 pb-3">
         <div className="border-border bg-background z-0 h-full w-full rounded-xl border flex flex-col">
           <div className="border-border flex flex-col gap-y-2 border-b py-2 px-3">
             <div className="flex flex-row gap-x-2 items-center">
               <div className="size-4 rounded-full bg-red-500"></div>
               <div className="size-4 rounded-full bg-yellow-500"></div>
               <div className="size-4 rounded-full bg-green-500"></div>
-              <code className="text-sm font-normal pl-3 text-gray-500">
+              <code className="text-xs sm:text-sm font-normal pl-3 text-gray-500">
                 {" "}
                 Huy&apos;s Terminal{" "}
               </code>
             </div>
           </div>
-          <pre ref={terminalScrollRef} className="p-4 flex-1 min-h-0 overflow-y-auto">
-            <code className="grid overflow-auto px-4 text-sm font-normal tracking-tight text-muted-foreground whitespace-pre-wrap break-words text-gray-300">
-              to print avaliable commands, type 'help' and press Enter
+          <pre
+            ref={terminalScrollRef}
+            className="p-4 flex-1 min-h-0 overflow-y-auto"
+          >
+            <code className="grid overflow-auto px-4 sm:text-sm font-normal tracking-tight text-muted-foreground whitespace-pre-wrap break-words text-gray-300 text-xs">
+              {
+                "to print avaliable commands, type 'help' and press Enter, \nto exit the terminal, type 'exit' and press Enter, \nto change the theme, type 'theme-dark/light' and press Enter "
+              }
               {terminalArray.map((item, index) => (
                 <span key={index} className="text-green-500">
                   {item}
@@ -102,7 +109,7 @@ export default function FunTerminal() {
                 <Input
                   type="text"
                   id="huyInput"
-                  className="h-auto rounded-none min-h-0 leading-tight shadow-none focus-visible:ring-0 text-green-500 caret-green-500 [caret-shape:block] p-0 cursor-default w-full text-left border-none"
+                  className="h-auto rounded-none min-h-0 leading-tight shadow-none focus-visible:ring-0 text-green-500 caret-green-500 [caret-shape:block] p-0 cursor-default w-full text-left border-none text-xs sm:text-sm"
                   onKeyDown={(e) => {
                     if (e.key !== "Enter") return;
                     e.preventDefault();
